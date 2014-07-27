@@ -1,0 +1,12 @@
+# Site settings
+title: Terence Kruger
+email: 
+description: "This is me, my blog and all things public"
+baseurl: ""
+url: "http://tjkruger.com"
+twitter_username: tjmkruger
+github_username:  tjmkruger
+
+# Build settings
+markdown: kramdown
+permalink: pretty
