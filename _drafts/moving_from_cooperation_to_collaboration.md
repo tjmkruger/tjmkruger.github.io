@@ -9,7 +9,6 @@ category: talk
 
 * What is the difference between cooperation and collaboration. Why does it matter?
 * How can we excercise our collaboration muscle?
-* Why do team ideas feel uninspired?
 * What practical excercises can help?
 
 Growing up i spent quite a bit of time playing soccer for my local soccer club.
