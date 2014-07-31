@@ -10,3 +10,7 @@ github_username:  tjmkruger
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+# Mr-Poole
+poole:
+  default_layour: "_layours/post.html"

@@ -1,0 +1,98 @@
+---
+title: Blogging With Jekyll
+layout: post
+date: 2014-07-31
+---
+
+## How did i get to Jekyll
+Well it has been a long time coming. 
+Every time i get stuck on something, help somebody or learn something new i tell myself that i need to get my blog going. 
+In the past i have tried [wordpress](https://wordpress.com) but just never got it off the ground. 
+Wordpress seemed great untill i realized that if i wanted to load a theme, that was not part of the default themes available in their store or custom built, i would have to have a paid account. 
+Had a look at [blogger](https://www.blogger.com) and [ghost](https://ghost.org) looking for a elegant way to have my blog completely in my control and have the freedom to do what i needed.
+Was just about to go with ghost and run it on an amazon instance when i was introduced to [jekyll](http://jekyllrb.com) as a bloggin engine.
+I have looked at Jekyll before, but mainly for hosting github pages.
+Turns out its a pretty good bloggin engine that works in github pages and with Mr-Poole creating drafst and publishing them is easy.
+
+## Summary
+
+### Ok enough background, here's my summary:
+* It has categories
+* It has tags
+* Multiple layouts
+* Static site pages
+* Hosting on github pages
+* Runs locally
+* Uses markdown
+
+### Still to test:
+* Searching
+* Comments
+* Listing posts by category
+* Listing posts by tag
+* Listing posts by date
+* Filtering posts
+* [Custom Collections](http://jekyllrb.com/docs/collections/)
+* [Data Files](http://jekyllrb.com/docs/datafiles/)
+
+### Blogs, Languages and Templates
+* Wordpress (php)
+* Ghost (node)
+* Jekyll (ruby)
+
+For a while i was of the opinion that the language the blog was written in was important. 
+I was concerned that if there was something i really needed extra in the markup to style some theme that i might need to change the way the application works. 
+Blogger and Jekyll are both solve this problem by giving access to the templating engine, allowing for as much customization as needed.
+
+### Moving a blog
+
+I was also concerned that i would not be happy with my choice and that i would need to move my blog. 
+This seemed like a lot of work.
+When i realized that moving a blog is as simple as importing the feed, i could finally be content with my choice.
+
+### Deploying with github pages
+* [Deploying Jekyll](http://jekyllrb.com/docs/github-pages)
+* [Github pages](https://help.github.com/articles/user-organization-and-project-pages)
+* [Custom Domain](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages) 
+* [Create CNAME](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages)
+
+### Running local
+Running jekyll locally seemed pretty easy but it didn't want to install with ruby 2.0.0, I had to upgrade my ruby to 2.1.0 . Turns out that using rvm is a better idea anyway.
+
+* Intall RVM: `$ curl -L https://get.rvm.io | bash -s stable --autolibs=enabled`
+* To use 2.1.0: `$ rvm install 2.1.0`
+* To set the default: `$ rvm use 2.1.0 --default` 
+* Install Jekyll: `$ gem install jekyll`
+* Generate new blog: `$ jekyll new myblog`
+* Run it local: `jekyll serve`
+* Run with drafts published: `jekyll serve --draft`
+
+[Quickstart Guide](http://jekyllrb.com/docs/quickstart)
+
+### Using Markdown
+
+Using markdown has been a learning curve but thankfully not that big of a one. 
+I like that with markdown there are only a limited number of things you can do and that you end up with semantic markup.
+
+* [Cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+### Title, Categories, Tags, Layouts and Dates
+
+<pre>
+ ---
+ layout: post
+ title: Title goes here
+ date: 
+ category: Single Category
+ categories: [Multiple, Categories]
+ tag: Single Tag
+ tags: [Multiple, Tags]
+ ---
+</pre>
+
+[Front Matter](http://jekyllrb.com/docs/frontmatter)
+
+### Creating posts with Mr-Poole
+
+## Building a Theme
+
