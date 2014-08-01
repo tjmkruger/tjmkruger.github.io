@@ -11,6 +11,5 @@ github_username:  tjmkruger
 markdown: kramdown
 permalink: pretty
 
-# Mr-Poole
 poole:
-  default_layour: "_layours/post.html"
+  default_extension: "markdown"
