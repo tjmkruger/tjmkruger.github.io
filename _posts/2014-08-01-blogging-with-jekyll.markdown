@@ -2,8 +2,11 @@
 title: Blogging With Jekyll
 layout: post
 date: 2014-08-01 19:16
-
+category: tools
+tags: [jekyll, blog]
 ---
+
+![Jekyll Logo](http://jekyllrb.com/img/logo-2x.png)
 
 ## How did i get to Jekyll
 Well it has been a long time coming. 
@@ -61,11 +64,11 @@ Event though Jekyll doesn't have an import option it would not be the end of the
 ### Running local
 Running jekyll locally seemed pretty easy but it didn't want to install with ruby 2.0.0, I had to upgrade my ruby to 2.1.0 . Turns out that using rvm is a better idea anyway.
 
-* Intall RVM: `$ curl -L https://get.rvm.io | bash -s stable --autolibs=enabled`
-* To use 2.1.0: `$ rvm install 2.1.0`
-* To set the default: `$ rvm use 2.1.0 --default` 
-* Install Jekyll: `$ gem install jekyll`
-* Generate new blog: `$ jekyll new myblog`
+* Intall RVM: `curl -L https://get.rvm.io | bash -s stable --autolibs=enabled`
+* To use 2.1.0: `rvm install 2.1.0`
+* To set the default: `rvm use 2.1.0 --default` 
+* Install Jekyll: `gem install jekyll`
+* Generate new blog: `jekyll new myblog`
 * Run it local: `jekyll serve`
 * Run with drafts published: `jekyll serve -D`
 * Run with drafts and watch the source for changes: `jekyll serve -w -D`
@@ -101,16 +104,16 @@ In `_config.yml` set the default extention to markdown.
 poole:
   default_extension: "markdown"
 </pre>
-* Create a draft: `$ poole draft "My Post"`
-* Publish a post with the current date: `$ poole publish _drafts/my_post.markdown`
+* Create a draft: `poole draft "My Post"`
+* Publish a post with the current date: `poole publish _drafts/my_post.markdown`
 * Use `-d` to keep the draft
-* Unpublish a post removing date: `$ poole unpublish _posts/2014-08-01-my_post.markdown`
+* Unpublish a post removing date: `poole unpublish _posts/2014-08-01-my_post.markdown`
 * Use `-p` to keep the post
 * Use `-t` to keep the timestamp when publishing or unpublishing a post
 
 Ran into one problem unpublishing a post. The date is removed but Jekyll throws an error for a missing time part. Using `-t` when unpublishing as a workaround.
 
-Unpublish a post keeping date: `$ poole unpublish -t _posts/2014-08-01-my_post.markdown`
+Unpublish a post keeping date: `poole unpublish -t _posts/2014-08-01-my_post.markdown`
 
 [Mr-Poole](https://github.com/mmcclimon/mr_poole)
 
