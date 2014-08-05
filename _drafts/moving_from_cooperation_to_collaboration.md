@@ -200,6 +200,9 @@ OK long story but in the end some effort from my side to keep bigger gaps betwee
   Collaboration is not the only way, but it is the most direct way to innovation.
 * ####In the present
   Collaboration happens in the present time, it exists while you are doing it.
+  Collaboration via email: During a conversation of work from home days, soho i remember somebody stating that they could collaborate via email.
+  Collaboration tools - Sharepoint, email: If at its core collaboration is in the present. Can we really use these tools for collaboration.
+  **Note**: Need to do some research on good collaboration tools. Find the dotnetrocks/hanselman episode on these. They were talking about full wall projectors and shared whiteboards. 
 * #### Bring to the party
   To Collaborate you must know what you and your fellow collaborators bring to the party
 * ####Full of love and enthusiasm
