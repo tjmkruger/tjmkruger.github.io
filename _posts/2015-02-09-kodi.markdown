@@ -1,0 +1,152 @@
+---
+title: Kodi
+layout: post
+date: 2015-02-09 22:08
+category: home
+tags: [xbmc,kodi,media browser,usb drive,utorrent]
+---
+
+I have eventually gotten around to installing [XBMC / KODI](http://kodi.tv/about). 
+Since a lightning strike, followed by a motherboard replacement that caused my windows 7 media centre to stop booting, i figure its a good time to get this done. 
+I have been avoiding getting this done, fearing the days of setup time to get everything working. 
+Kodi really impressed me. 
+Once the downloads were all done it took a total of 5 mins to have the machine booted, tested and installed. 
+Since then i have spent a day playing with plugins etc. and am really glad to see media browser working. 
+
+The one thing that i am missing is filtering by genre or year in the custom home items of the Xbmb3c plugin using media browser.
+It doesn't seem to be supported as yet. 
+This would make the Xbmb3c plugins custom home items more useful to me. 
+I could have shortcuts for only the kids movies, this years movies etc. 
+Perhaps ill look at adding this support in the future.
+
+One of the biggest things to get past was the mounting of my external hard drives so that media browser and Kodi could access the content. 
+The problem was that when the usb drives, that are formatted with NTFS, are mounted they give only the running user access for reading and writing. 
+The running user in my case was mediapc as that was what i chose to call my user during installation. 
+Media browser is running under the mediabrowser user. 
+I had to edit my fstab to mount the drives using a known group with permissions and then add both users to that group.
+For more details see the details below.
+
+![Xbmb3c 1080XF Kodi skin home page](http://mediabrowser.tv/community/uploads/inline/2/544c42a5891da_1.png)
+
+# Heres my setup:
+
+## Getting Kodi running:
+
+1. Download the KodiBuntu iso from here: [http://kodi.tv/download]()
+2. Create a bootable USB drive from the ISO. 
+4. Restart, booting from the usb again this time choosing to install Kodi
+5. Follow the instructions until Kodi is running.
+6. Remove the usb and re-boot.
+
+## Install Media Browser server
+
+To get access to the terminal use Ctl+Alt+F1 - F6 on the machine to switch to tty1 - 6 (Kodi user interface is running on tty6) or connect via ssh to the media center pc. 
+To connect from windows use putty. Kodi does display its ip address at System->System Info->Network. 
+I connected from my Mac using ssh and the credentials that i chose during installation of Kodi 
+
+- `$ssh %un%@192.168.1.66`
+- password: %pwd%
+
+KodiBuntu is a derivative of Ubuntu so i followed the ubuntu instructions here: [http://mediabrowser.tv/download/](), click on linux under servers and choose ubuntu.
+
+- `$sudo add-apt-repository ppa:apps-z/mediabrowser`
+- `$sudo apt-get update`
+- `$sudo apt-get install mediabrowser`
+- `$service mediabrowser start`
+- visit http://localhost:8096/mediabrowser
+
+## Install Media Browser Kodi plugin
+
+I followed the instructions here: [http://mediabrowser.tv/download]()
+
+- Download the plugin repository zip file.
+- Install using System -> Add-ons -> Install from zip file
+- Install the Kodi add-on from the repository
+- Install your skin of choice from the Kodi repository. I am using the 1080XF MB3 skin.
+
+## Create a group to use when mounting the usb drives
+
+- Add a new group to use for media admin: `$sudo groupadd mediaadmin`
+- Add the user running kodi (in my case mediapc) to the media admin group: `$sudo usermod -a -G mediaadmin mediapc`
+- Find the user that is running mediabrowser: `ps aux | grep mediabrowser`
+- Add the mediabrowser user to the media admin group: `$sudo usermod -a -G mediaadmin mediabrowser`
+- Check the two users belong to the mediaadmin group: `groups mediapc` and `$groups mediabrowser`. Should see mediaadmin in each case.
+
+## Mount the usb drive
+
+- Find the hard drives UUID: `$sudo blkid`
+- Edit the fstab: `$sudo vim /etc/fstab`
+- Add a line for the drive you are mounting: 
+  - `UUID=4CE4D97AE4D966AC /media/Movies auto umask=000,gid=mediaadmin`
+  - The umask is in the format user-group-all where 0 is all permissions and 7 is no permissions.
+  - I am giving all other users full permissions so that i can manage the files later when i mount the remote file system locally.
+- Restart to allow and test that the drives mount with the required permissions. 
+- Check the permissions: `$ls -l /media`
+  - Should see: drwxrwx- - - root mediaadmin ... Movies
+
+## Point Media Browser to the files
+
+- Open the browser to: %ipaddress%:8096/mediabrowser
+- Navigate to Library
+- Add the  media folders
+
+## Views
+
+I like the Xbmb3c 1080XF skin for its home screen.
+For some of the views once navigating i like the following:
+
+- For the Movies and Series names view i like: Panel 
+- For the Series details (season list and episode list) i like: Info List
+
+## Managing Files
+
+To manage files I find the best is to mount the remote file system via ssh to the local machine. 
+Once this is done manage the files as normal.
+To do this use one of the following:
+
+- Ubuntu / Debian: `$sudo apt-get install sshfs`
+- Mac: Get FUSE and sshfs from the [osxfuse site](http://osxfuse.github.io/)
+- Windows: Get the latest package from the google code repo. [Direct Link](https://win-sshfs.googlecode.com/files/win-sshfs-0.0.1.5-setup.exe)
+
+[More info here](https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh)
+
+- Create a local directory as a mount point: `$mkdir ~/Documents/MediaPC`
+- Create the mount point: `$sshfs mediapc@192.168.1.66:/ ~/Documents/MediaPC`
+- To unmount: `$umount ~/Documents/MediaPC`
+Now work with the files.
+
+## Setup utorrent for new content
+
+[Install UTorrent](http://2buntu.com/articles/1307/installing-utorrent-server-on-ubuntu/) \ [Start utorrent-server on startup](http://ubuntumind.blogspot.com/2011/02/utorrent-on-ubuntu.html)
+
+- Found the latest uTorrent server here: [http://www.utorrent.com/downloads/linux]()
+- Extract the package: `$tar -zvxf ~/Downloads/utorrent-server-3.0.tar.gz`
+- Move the folder to users bin: `$sudo mv utorrent-server-3.0 /usr/bin/utorrent-server`
+- Set exec permissions: `$sudo chmod -R 777 /usr/bin/utorrent-server`
+- Create the init script: `$sudo touch /etc/init.d/utorrent`
+- Set the init scripts exec permissions: `$sudo chmod -R 777 /etc/init.d/utorrent`
+- Add the below to the init script replacing:
+  - CHDIR: /usr/bin/utorrent-server
+  - USER: mediapc
+- Start utorrent when pc starts: `sudo update-rc.d utorrent defaults`
+- Start the service: `$sudo /etc/init.d/utorrent start`
+- Create the needed download folders:
+  - `$mkdir /media/Series2/Downloads/complete`
+  - `$mkdir /media/Series2/Downloads/incomplete`
+  - `$mkdir /media/Series2/Downloads/torrents`
+  - `$mkdir /media/Series2/Downloads/complete-torrents`
+- Open a web browser [http://192.168.1.66:8080/gui]()
+- Set the default directories under settings->directories:
+  - new downloads: /media/Series2/Downloads/incomplete
+  - completed: /media/Series2/Downloads/complete
+  - torrents: /media/Series2/Downloads/torrents
+  - completed torrents: /media/Series2/Downloads/completed-torrents
+
+<script src="https://gist.github.com/tjmkruger/b2538450498f5be108e5.js"></script>
+
+## Some other interesting plugins that im using
+
+Check out some more plugins here: [http://addons.xbmc.org/]()
+
+- Apple TV Trailers
+- Youtube
