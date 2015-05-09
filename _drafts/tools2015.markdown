@@ -9,16 +9,19 @@ published: true
 
 iTerm2 - If you spend a lot of time in a terminal, then you'll appreciate all the little things that add up to a lot. 
 [See it here] (http://www.iterm2.com) 
+
 Some of the features i'm using up to now are:
 - Split panes
 - 256 Colours
+
+## Sublime Text
+- [Glue : A terminal for sublime text](http://sweetme.at/2014/04/07/glue-a-terminal-for-sublime-text/)
 
 ## Vim Tools
 - Fugitive
 
 ### Vim Tools to check
 - livedown
-
 
 ## Windows Tools
 - Rufus
