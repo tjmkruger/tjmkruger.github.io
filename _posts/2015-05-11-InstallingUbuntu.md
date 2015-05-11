@@ -1,8 +1,7 @@
 ---
-published: false
 title: Installing Ubuntu from USB
 layout: post
-date: 2015-05-09 11:00
+date: 2015-05-11 13:48
 category: home
 tags: [usb drive,ubuntu,mac]
 ---
