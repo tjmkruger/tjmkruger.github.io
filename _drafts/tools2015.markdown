@@ -15,7 +15,7 @@ Some of the features i'm using up to now are:
 - 256 Colours
 
 ## Sublime Text
-- [Glue : A terminal for sublime text](http://sweetme.at/2014/04/07/glue-a-terminal-for-sublime-text/)
+- [Glue : A terminal for sublime text](http://sweetme.at/2014/04/07/glue-a-terminal-for-sublime-text/) (Missing some nice command line attributes like auto complete etc.)
 
 ## Vim Tools
 - Fugitive
