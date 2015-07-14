@@ -1,7 +1,6 @@
 ---
 title: Tools2015
 layout: post
-date: {}
 published: true
 ---
 
@@ -14,14 +13,21 @@ Some of the features i'm using up to now are:
 - Split panes
 - 256 Colours
 
-## Sublime Text
+## Home brew
+- [Cask](http://caskroom.io)
+
+## Sublime Text Packages
+- [Material Theme](https://github.com/equinusocio/material-theme)
 - [Glue : A terminal for sublime text](http://sweetme.at/2014/04/07/glue-a-terminal-for-sublime-text/) (Missing some nice command line attributes like auto complete etc.)
+- [Markdown Preview](https://github.com/revolunet/sublimetext-markdown-preview)
+- [Sidebar Enhancements](https://github.com/titoBouzout/SideBarEnhancements)
+- [Git Gutter](https://github.com/jisaacks/GitGutter)
+- [Bracket Guard](https://packagecontrol.io/packages/BracketGuard)
+- [Auto Semi Colon](https://github.com/vivait/SublimeAutoSemiColon)
 
-## Vim Tools
-- Fugitive
-
-### Vim Tools to check
-- livedown
+## Data Management
+- [Neo4j]()
+- [Get Event Store]()
 
 ## Windows Tools
 - Rufus
