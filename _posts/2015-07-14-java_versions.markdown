@@ -1,7 +1,7 @@
 ---
 title: Installing and Managing Java Versions
 layout: post
-published: false
+published: true
 tags: [Java]
 ---
 
