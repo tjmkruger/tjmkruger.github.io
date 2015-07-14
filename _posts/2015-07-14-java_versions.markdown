@@ -16,7 +16,7 @@ tags: [Java]
 - Make sure the versions folder exits: `mkdir ~/.jenv/versions`
 
 ## Working with JEnv
-jenv is for a equivalent of rbenv, but for Java environment.
+jenv is an equivalent of rbenv, but for Java environment.
 
 - Add java version: `jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home`
 - List java versions: `jenv versions`
