@@ -4,9 +4,9 @@ layout: post
 date: 2014-08-01 19:16
 category: tools
 tags: [jekyll, blog]
+img: https://camo.githubusercontent.com/2752c82268f4afc52bdf3b74d2de323d00a7f818/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f3239363433322f3439313439302f36373861653731632d626132662d313165322d393530352d3465393163363366373239632e706e67
+preview: I was concerned that if there was something I needed extra, in the markup to style a theme, that I might need to change the way the application generates its markup. Jekyll solves this problem ...
 ---
-
-![Jekyll Logo](http://jekyllrb.com/img/logo-2x.png)
 
 ## How did i get to Jekyll
 Well it has been a long time coming. 

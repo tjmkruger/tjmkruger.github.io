@@ -1,11 +1,11 @@
 ---
 title: Installing and Managing Java Versions
 layout: post
-published: true
+published: false
 tags: [Java]
-img: http://2.bp.blogspot.com/-0g37IcljoGw/UuegvNH8rCI/AAAAAAAAROI/9cMSc3YtFEI/s1600/java-oracle.png
-preview: Managing the versions of Java on my machine was becoming a pain. Using JEnv all that has changed.
 ---
+
+# Installing and Managing Java Versions
 
 ## Installation and setup using brew cask
 - Install brew cask: `brew install caskroom/cask/brew-cask`

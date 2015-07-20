@@ -4,6 +4,8 @@ layout: post
 date: 2015-02-09 22:08
 category: home
 tags: [xbmc,kodi,media browser,usb drive,utorrent]
+img: https://raw.githubusercontent.com/xbmc/xbmc/master/tools/darwin/packaging/media/atv2/TopShelf.png
+preview: I'm enjoying using Kodi as a media centre, it integrates with media browser making use of my library including all the meta data. Installing Kodi was interesting here's how i did it ...
 ---
 
 I have eventually gotten around to installing [XBMC / KODI](http://kodi.tv/about). 

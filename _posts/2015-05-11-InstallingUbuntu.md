@@ -4,9 +4,9 @@ layout: post
 date: 2015-05-11 13:48
 category: home
 tags: [usb drive,ubuntu,mac]
+img: https://design.ubuntu.com/wp-content/uploads/logo-ubuntu_st_no%C2%AE-black_orange-hex.png
+preview: This week I had to re-install one of my ubuntu machines when the hard drive crashed. I had to do some googling to get it done. When i got it all done i thought that was easy enough, heres how I did it
 ---
-
-## Installing Ubuntu from USB
 
 This week I had to re-install one of my ubuntu machines when the hard drive crashed. I had to do some googling to get it done. When i got it all done i thought that was easy enough, heres how I did it:
 
