@@ -1,3 +1,4 @@
+// http://www.ilcorsaronero.it/progettienvato/SiteParallax/ParallaxSite/minime/html/index.html#section_blog
 
 $(function() {
 	
