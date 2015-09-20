@@ -16,6 +16,12 @@ Some of the features i'm using up to now are:
 ## Home brew
 - [Cask](http://caskroom.io)
 
+## Command line
+- oh my z shell
+- Typescript: npm install -g typescript
+- Gulp: npm install -g gulp
+- TSD: npm install -g tsd
+
 ## Sublime Text Packages
 - [Material Theme](https://github.com/equinusocio/material-theme)
 - [Glue : A terminal for sublime text](http://sweetme.at/2014/04/07/glue-a-terminal-for-sublime-text/) (Missing some nice command line attributes like auto complete etc.)
@@ -24,6 +30,9 @@ Some of the features i'm using up to now are:
 - [Git Gutter](https://github.com/jisaacks/GitGutter)
 - [Bracket Guard](https://packagecontrol.io/packages/BracketGuard)
 - [Auto Semi Colon](https://github.com/vivait/SublimeAutoSemiColon)
+- [Arctic Typescript] (https://github.com/Phaiax/ArcticTypescript)
+- [Vintage](https://www.sublimetext.com/docs/3/vintage.html)
+[Article for using typescript and sublime text](https://www.airpair.com/typescript/posts/typescript-development-with-gulp-and-sublime-text)
 
 ## Data Management
 - [Neo4j]()
