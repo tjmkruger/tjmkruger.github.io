@@ -86,6 +86,20 @@ I followed the instructions here: [http://mediabrowser.tv/download]()
 - Check the permissions: `$ls -l /media`
   - Should see: drwxrwx- - - root mediaadmin ... Movies
 
+## Setting a static IP
+
+- Edit the interfaces file: `sudo vim /etc/network/interfaces
+
+```bash
+auto eth0
+iface eth0 inet static
+        address 192.168.1.50
+        netmask 255.255.255.0
+        gateway 192.168.1.1
+        dns-nameservers 8.8.8.8 8.8.4.4 192.168.1.1
+```
+- I had to restart the machine for it to take effect. Restarting the network didn't work.
+
 ## Point Media Browser to the files
 
 - Open the browser to: %ipaddress%:8096/mediabrowser
