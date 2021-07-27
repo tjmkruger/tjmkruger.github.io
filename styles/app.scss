@@ -1,0 +1,70 @@
+body {
+  font-family: minerva-modern;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  letter-spacing: 0.035em;
+  line-height: 1.7em;
+  text-transform: none;
+  color: #293047;
+  background: #f8f8f8;
+}
+
+h1 {
+  @apply text-6xl mt-8 mb-2;
+}
+
+h2 {
+  @apply text-6xl;
+}
+
+h3 {
+  @apply text-3xl py-2;
+}
+
+p {
+  @apply my-6;
+}
+
+ul {
+  @apply my-8 ml-5;
+  @apply list-disc list-outside;
+  li {
+    @apply my-1;
+  }
+}
+
+blockquote {
+  @apply italic font-quote;
+}
+
+main a {
+  @apply text-orange-900 border-orange-900;
+
+  border-bottom-width: 1px;
+  transition: border-color 0.15s ease-out, color 0.15s ease-out;
+  &:hover {
+    @apply text-orange-600 border-orange-600;
+  }
+}
+
+.section-alternate {
+  color: #1a1f2d;
+  @apply bg-gray-100;
+}
+
+.section-footer {
+  color: #1a1f2d;
+  @apply bg-gray-100;
+  a {
+    border-color: #1a1f2d;
+    border-bottom-width: 1px;
+    transition: border-color 0.15s ease-out, color 0.15s ease-out;
+    &:hover {
+      color: #a4a5ab;
+      border-color: #dddee0;
+    }
+  }
+}
+
+@import "post";

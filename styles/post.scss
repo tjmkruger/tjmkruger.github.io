@@ -1,0 +1,21 @@
+.post {
+  h2 {
+    @apply italic font-quote;
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply my-4;
+  }
+
+  ul {
+    li {
+      p:first-child {
+        display: inline;
+      }
+      ul {
+        @apply ml-8;
+      }
+    }
+  }
+}

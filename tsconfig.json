@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@format": ["format.ts"],
+      "@PostType": ["data/posts/PostType"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "data/posts/paceservices/index.js",
+    "data/posts/ibnr/index.js",
+    "data/posts/eka/index.js",
+    "data/posts/driven/index.js",
+    "data/posts/contracting/index.js",
+    "data/posts/bison/index.js"
+  ],
+  "exclude": ["node_modules"]
+}
