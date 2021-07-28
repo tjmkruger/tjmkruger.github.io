@@ -11,7 +11,7 @@ body {
 }
 
 h1 {
-  @apply text-6xl mt-8 mb-2;
+  @apply text-2xl mt-8 mb-2;
 }
 
 h2 {
@@ -68,3 +68,12 @@ main a {
 }
 
 @import "post";
+@media (min-width: 768px) {
+  @import "md.scss";
+}
+@media (min-width: 1024px) {
+  @import "lg.scss";
+}
+@media (min-width: 1280px) {
+  @import "xl.scss";
+} ;

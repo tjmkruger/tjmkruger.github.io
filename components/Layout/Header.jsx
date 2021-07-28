@@ -1,7 +1,7 @@
 export const HeaderSection = () => {
   return (
     <header>
-      <div className="container pt-10 flex">
+      <div className="container pt-10 flex flex-col md:flex-row items-center">
         <div className="flex-1 flex">
           <nav className="whitespace-nowrap px-1 py-2 space-x-4">
             <a href="/">Welcome</a>
@@ -16,7 +16,7 @@ export const HeaderSection = () => {
             Terence Kruger
           </a>
         </div>
-        <div className="flex-1 flex justify-end">
+        <div className="hidden md:flex flex-1 justify-end">
           <nav className=" whitespace-nowrap px-1 py-2 space-x-4">
             <a target="_blank" href="https://github.com/tjmkruger">
               Github

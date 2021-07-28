@@ -4,12 +4,12 @@ export const FooterSection = () => {
   return (
     <>
       <section>
-        <div className="container flex justify-center py-28">
+        <div className="container flex justify-center py-8 md:py-28">
           <Socials></Socials>
         </div>
       </section>
       <footer className="section-footer">
-        <div className="container flex flex-col items-center py-16">
+        <div className="container flex flex-col items-center py-2 md:py-16">
           <p className="mb-3 space-x-4">
             <a href="/" rel="noopener noreferrer">
               Welcome

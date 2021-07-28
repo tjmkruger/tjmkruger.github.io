@@ -12,9 +12,15 @@ export const PostCard = (post: Post) => {
     <div className="bg-white hover:shadow-lg">
       <a href={`/post/${post.slug}`}>
         {image ? (
-          <Image publicId={image.file} className="w-full" alt={image.alt}>
+          <Image
+            publicId={image.file}
+            className="w-full"
+            alt={image.alt}
+            secure="true"
+          >
             <Transformation quality="80" />
             <Transformation crop="limit" width="450" />
+            <Transformation fetchFormat="auto" />
           </Image>
         ) : (
           <div>Missing Image</div>
