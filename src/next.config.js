@@ -1,6 +1,8 @@
 const withSvgr = require("next-svgr");
 
 module.exports = withSvgr({
+  reactStrictMode: true,
+  exportTrailingSlash: true,
   webpack: (config) => {
     config.module.rules.push({
       test: /\.html/,
