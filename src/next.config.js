@@ -19,10 +19,6 @@ module.exports = withSvgr({
   //       source: "/(a|A)(b|B)(o|O)(u|U)(t|T)",
   //       destination: "/about",
   //     },
-  //     {
-  //       source: "/(c|C)(a|A)(t|T)(e|E)(g|G)(o|O)(r|R)(y|Y)/:category",
-  //       destination: "/category/:category",
-  //     },
   //   ];
   // },
 });

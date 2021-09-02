@@ -1,20 +1,16 @@
 name: Deploy to GitHub Pages
 
-
 on:
   push:
     branches: [main]
-
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
-
     strategy:
       matrix:
         node-version: [14.x]
-
 
     steps:
       - name: Get files
@@ -25,14 +21,17 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install packages
         run: npm ci
+        working-directory: src
       - name: Build project
         run: npm run build
+        working-directory: src
       - name: Export static files
         run: npm run export
+        working-directory: src
       - name: Add .nojekyll file
-        run: touch ./out/.nojekyll
+        run: touch ./public/.nojekyll
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           branch: gh-pages
-          folder: out
+          folder: public
